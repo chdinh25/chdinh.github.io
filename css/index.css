@@ -1,0 +1,383 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.title h1 {
+  color: red;
+  text-align: center;
+  font-size: 40px;
+}
+
+.title p {
+  color: black;
+  font-size: 30px;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header {
+  width: 90%;
+  position: absolute;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__container img {
+  margin: 20px;
+}
+
+.nav__bar {
+  display: flex;
+}
+
+/* Carousel */
+.carousel__container {
+  text-align: center;
+}
+
+.carousel__container h1 {
+  font-size: 50px;
+  color: white;
+  font-weight: 500px;
+  margin: 30px;
+}
+
+#carousel {
+  background-image: url(./../img/home_slider.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__container button {
+  background-color: #C5BAFF;
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid #C5BAFF;
+  /* border: none; */
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+#carousel .arrow__icon {
+  margin-top: 20px;
+  color: black;
+  animation-name: arrowDown;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.carousel__container button:hover {
+  background-color: #af2239;
+}
+
+/* keyframe from to  */
+@keyframes arrowDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+#overview__container{
+  background-image: url(./../img/bg1.png);
+  background-size: cover;
+  height: 550px;
+  display: flex;
+}
+
+.overview__title p{
+  padding-left: 10%;
+  padding-bottom: 15px;
+}
+
+#overview__container h1{
+  margin: 80px 80px 30px 80px;
+}
+
+.list__content {
+  text-align: left;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.list__content li {
+  display: flex;
+  margin: 15px 0;
+}
+
+.list__content li i {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  justify-content: center;
+  line-height: 24px;
+  border-style: solid;
+  border-radius: 50%;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    #f55f8d 0,
+    #f8ae56 51%,
+    #f55f8d 100%
+  );
+  margin: 5px;
+}
+
+.list__content li p{
+  color: black;
+  font-size: 24px;
+  margin: 5px 0 5px 0;
+  text-transform: none;
+}
+
+.overview__right{
+  margin: 100px 90px 0 0;
+}
+
+/* Blog  */
+#blog{
+  padding: 80px 0;
+  background-image: url(./../img/bg2.png);
+  background-size: cover;
+  margin-top: 120px;
+}
+
+#blog .title{
+  margin: 40px;
+}
+
+.blog__content{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 50px;
+}
+
+.blog__content img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(50%);
+}
+
+.blog__item{
+  position: relative;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(230, 43, 74, 0.6);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.blog__item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay__view__img{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.overlay__view__img i{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(20px);
+  transition: all 0.5s;
+}
+
+.overlay__content{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  transform: translateY(20px);
+  transition: all 0.5s;
+}
+
+.overlay__view__img i:hover{
+  background-color: black;
+  color: white;
+}
+
+.blog__item:hover .overlay__content {
+  transform: translateY(0);
+}
+
+.blog__item:hover .overlay__view__img{
+  transform: translateY(0);
+}
+
+.overlay__content p{
+  color: white;
+  font-size: 20px;
+}
+
+.overlay__content h1{
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+#number {
+  background-color: black;
+  color: white;
+  padding: 70px;
+}
+
+.number__item {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#number h1{
+  padding: 20px;
+}
+
+.number__item h1{
+  font-size: 20px;
+}
+
+.number__item p {
+  font-size: 70px;
+}
+
+.count__up::after {
+  content: "%";
+}
+
+/* Digital */
+#digital{
+  text-align: center;
+  padding: 80px;
+  background-image: url("./../img/bussiness_img_1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#digital h1{
+  margin-bottom: 50px;
+}
+
+/* Contact */
+#contact{
+  padding: 80px;
+  background-image: url(./../img/bg2.png);
+}
+
+#contact .title h1{
+  color: black;
+  margin-bottom: 40px;
+}
+
+.contact__content{
+  display: flex;
+  margin-top: 30px;
+}
+
+.contact__content__left{
+  width: 60%;
+}
+
+.contact__form{
+  width: 40%;
+  padding-left: 10px;
+}
+
+.contact__form form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__form form input, .contact__form form textarea {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.contact__form form input[type="button"] {
+  background-color: black;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: none;
+}
+
+.contact__content form input[type="button"]:hover {
+  background-color: red;
+}
+
+
+/* Back to top  */
+.cd-top{
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  line-height: 50px; 
+  border-radius: 5px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out {
+  opacity: 0.5;
+}
